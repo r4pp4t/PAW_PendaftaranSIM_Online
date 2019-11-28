@@ -1,6 +1,6 @@
 
 <div class="col-sm-12" style="background-color: #F8F9F9;padding-top: 4.8%;">
-  <h3>Pendaftaran SIM Online</h3>
+  <h3>Pendaftaran SIM Online versi 2</h3>
 </div>
   
 <div class="container-fluid"  style="margin-bottom: 2.58%">    
