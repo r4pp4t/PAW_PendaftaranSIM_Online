@@ -32,9 +32,9 @@
                     </td>
                     <td width="250">
                       <a href="<?php echo site_url('admin/edit/'.$admin->id) ?>"
-                       class="btn btn-small btn-primary"> Edit</a>
+                       class="btn btn-small"><i class="fab fa-user"></i> Edit</a>
                       <a onclick="deleteConfirm('<?php echo site_url('admin/delete/'.$admin->id) ?>')"
-                       href="#!" class="btn btn-small btn-warning"><i class="fas fa-spa"></i> Hapus</a>
+                       href="#!" class="btn btn-small text-danger"><i class="fas fa-spa"></i> Hapus</a>
                     </td>
                   </tr>
                   <?php endforeach; ?>
