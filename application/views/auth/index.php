@@ -27,8 +27,7 @@
       </div>
     </div>
     <div class="col-sm-12">
-    <a class="btn btn-primary" href="<?= base_url('login_user/index') ?>">Hasil Tes</a>
-    <a class="btn btn-primary" href="<?= base_url('login_admin/index') ?>">Polisi (Admin)</a>
+    <a class="btn btn-primary" href="<?= base_url('login_user/index') ?>">Login</a>
   </div>
   </div>
 </div>

@@ -37,8 +37,13 @@ class login_user extends CI_Controller {
 				$this->session->set_userdata($data);
 				if($user['level']==2){
 					redirect('user');
-				}else{
-					$this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">Silahkan Login di form Admin!</div>');
+				}elseif($user['level']==1){
+					redirect('admin');
+				}elseif($user['level']==3){
+					redirect('polisi');
+				}
+				else{
+					$this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">Silahkan Login dengan Benar!!!</div>');
 				redirect('login_user');
 				}
 			}else{
