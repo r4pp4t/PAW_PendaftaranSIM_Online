@@ -7,7 +7,8 @@
   <div class="row content">
     <div class="col-sm-12">
       <div class="col-sm-10" style="background-color: #fff; margin-left: 10%; margin-top: 1%">
-        <nav class="navbar" style="background-color:#EBF5FB ;margin-right: -1.4%;margin-left: -1.4%" ><h3>Informasi DATABASE Kepolisian</h3></nav>
+        <nav class="navbar" style="background-color:#EBF5FB ;margin-right: -1.4%;margin-left: -1.4%" ><h3 style="margin-left: 15%">Informasi DATABASE Kepolisian</h3>
+        <a href="<?= base_url('admin/creat') ?>"class="btn btn-primary float-right">Tambah Data</a></nav>
         <div class="table-responsive">
               <table class="table table-hover text-center" id="dataTable" width="100%" cellspacing="0">
                 <thead>
@@ -32,9 +33,9 @@
                     </td>
                     <td width="250">
                       <a href="<?php echo site_url('admin/edit/'.$admin->id) ?>"
-                       class="btn btn-small"><i class="fab fa-user"></i> Edit</a>
+                       class="btn btn-primary">Edit</a>
                       <a onclick="deleteConfirm('<?php echo site_url('admin/delete/'.$admin->id) ?>')"
-                       href="#!" class="btn btn-small text-danger"><i class="fas fa-spa"></i> Hapus</a>
+                       href="#!" class="btn btn-secondary"> Hapus</a>
                     </td>
                   </tr>
                   <?php endforeach; ?>
