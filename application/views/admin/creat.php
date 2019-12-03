@@ -39,6 +39,7 @@
               </div>
 
               <input class="btn btn-success" type="submit" name="btn" value="Save" />
+              <a href="<?= base_url('admin/index') ?>" class="btn btn-success">kembali</a>
             </form>
       </div>
     </div>
