@@ -50,4 +50,24 @@ class Admin extends CI_Controller
             redirect(site_url('admin/index'));
         }
     }
+
+    public function creat(){
+        $this->form_validation->set_rules('username','Username','required|trim|is_unique[admin.username]',['is_unique'=>'Username sudah digunakan!']);
+        if($this->form_validation->run()== false){
+             $data2['title']  = 'Form Input Data';
+            $this->load->view('templates/auth_header',$data2);
+            $this->load->view("admin/creat");
+            $this->load->view('templates/auth_footer');
+        }else{
+            $data=[
+                'username'=>$this->input->post('username'),
+                'password'=>password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+                'level' => $this->input->post('level')
+            ];
+            $this->db->insert('admin',$data);
+            redirect('admin');
+        }
+
+       
+    }
 }
