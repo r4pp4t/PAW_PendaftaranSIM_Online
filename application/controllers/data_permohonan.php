@@ -38,9 +38,22 @@ class Data_permohonan extends CI_Controller {
 			echo "<option value='".$baris->id_satpas."'>".$baris->alamat_satpas."</option>";
 		}
 	}
-	function get_nik(){
-		$nik=$this->input->post('nik');
-		$data=$this->M_pos->get_data_nik($nik);
-		echo json_encode($data);
-	}
+	public function search(){
+    $nik = $this->input->post('nik');
+    
+    $ktp = $this->M_pos->viewByNik($nik);
+    
+    if( ! empty($ktp)){ // Jika data siswa ada/ditemukan
+      // Buat sebuah array
+      $callback = array(
+        'status' => 'success', // Set array status dengan success
+        'nama' => $ktp->nama, // Set array nama dengan isi kolom nama pada tabel siswa
+        'alamat' => $ktp->alamat, // Set array jenis_kelamin dengan isi kolom alamat pada tabel siswa
+      );
+    }else{
+      $callback = array('status' => 'failed'); // set array status dengan failed
+    }
+    echo json_encode($callback); // konversi varibael $callback menjadi JSON
+  }
+    
 }

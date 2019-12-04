@@ -128,9 +128,7 @@
           <tr>
             <td style="width: 40%; text-align: right;">NIK/Nomor KTP</td>
             <td style="">
-              <input type="text" name="nik" class="form-control" id="nik">
-
-            </td>
+              <input type="text" name="nik" class="form-control" id="nik"><button type="button" id="btn-search">Cari</button>
           </tr>
           <tr>
             <td style="width: 40%; text-align: right;">Nama Lengkap</td>
@@ -186,26 +184,3 @@
 </div>
 </div>
 </div>
-<script type="text/javascript">
-        $(document).ready(function(){
-             $('#nik').on('input',function(){
-                var nik=$(this).val();
-                $.ajax({
-                    type : "POST",
-                    url  : "<?php echo base_url('index.php/data_permohonan/get_nik')?>",
-                    dataType : "JSON",
-                    data : {nik: nik},
-                    success: function(data){
-                        $.each(data,function(nik, nama){
-                            $('[name="nama"]').val(data.nama);
-                             
-                        });
-                         
-                    }
-                });
-                return false;
-
-           });
- 
-        });
-    </script>
