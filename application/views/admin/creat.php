@@ -1,6 +1,6 @@
 
 <div class="col-sm-12" style="background-color: #F8F9F9;padding-top: 4%;">
-  <a class="btn btn-primary float-right" href="<?= base_url('login_admin/logout');?>">LOGOUT</a>
+  <a class="btn btn-primary float-right" href="<?= base_url('login_admin/logout');?>"><i class="fa fa-sign-out-alt"></i> LOGOUT</a>
   <h3>FORM Tambah Data</h3>
 </div>
 
@@ -38,8 +38,8 @@
                 </div>
               </div>
 
-              <input class="btn btn-success" type="submit" name="btn" value="Save" />
-              <a href="<?= base_url('admin/index') ?>" class="btn btn-success">kembali</a>
+              <input class="btn btn-success" type="submit" name="btn" value="Save">
+              <a href="<?= base_url('admin/index') ?>" class="btn btn-success"><i class="fa fa-undo"></i> kembali</a>
             </form>
       </div>
     </div>

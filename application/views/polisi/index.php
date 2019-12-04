@@ -1,5 +1,5 @@
 <div class="col-sm-12" style="background-color: #F8F9F9;padding-top: 4%;">
-  <a class="btn btn-primary float-right" href="<?= base_url('login_admin/logout');?>">LOGOUT</a>
+  <a class="btn btn-primary float-right" href="<?= base_url('login_admin/logout');?>"><i class="fa fa-sign-out-alt"></i> LOGOUT</a>
   <h3>Data Kepolisian</h3>
 </div>
   

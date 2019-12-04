@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="col-sm-12">
-    <a class="btn btn-primary" href="<?= base_url('login_user/index') ?>">Login</a>
+    <a class="btn btn-primary" href="<?= base_url('login_user/index') ?>"><i class="fa fa-sign-in-alt"></i> Login</a>
   </div>
   </div>
 </div>

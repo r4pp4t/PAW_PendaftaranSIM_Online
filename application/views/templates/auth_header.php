@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/bootstrap.min.css">
   <link href="<?= base_url('assets/'); ?>assets/css/login-register.css" rel="stylesheet" />
   <link href="<?= base_url('assets/'); ?>assets/css/bootstrap.css" rel="stylesheet" />
-  <link href="<?= base_url('assets/'); ?>assets/fontawesome/css/all.css" rel="stylesheet" />
+  <link href="<?= base_url('assets/'); ?>fontawesome/css/all.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="<?= base_url('assets/'); ?>js/bootstrap.min.js"></script>
   <script src="<?= base_url('assets/'); ?>assets/js/jquery-1.10.2.js" type="text/javascript"></script>

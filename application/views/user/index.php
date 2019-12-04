@@ -1,5 +1,5 @@
 <div class="col-sm-12" style="background-color: #F8F9F9;padding-top: 4%;">
-	<a class="btn btn-primary float-right" href="<?= base_url('login_user/logout');?>">LOGOUT</a>
+	<a class="btn btn-primary float-right" href="<?= base_url('login_user/logout');?>"><i class="fa fa-sign-out-alt"></i> LOGOUT</a>
   <h3>Data User</h3>
 
 </div>
