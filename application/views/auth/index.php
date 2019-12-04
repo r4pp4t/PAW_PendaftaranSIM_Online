@@ -8,7 +8,6 @@
     <div class="col-sm-12" style="padding-left: 20%; margin-bottom: 2%">
       <a class="btn btn-lg btn-bundar btn-selected" data-toggle="tooltip" data-placement="top" title="Informasi Pendaftaran" href="javascript:void(0)"><img src="<?= base_url('assets/')?>png/badge-4x.png"></a>
       <a class="btn btn-lg btn-bundar" data-toggle="tooltip" data-placement="top" title="Data Permohonan" href="<?= base_url('data_permohonan/index') ?>"><img src="<?= base_url('assets/')?>png/paperclip-4x.png"></a>
-      <a class="btn btn-lg btn-bundar" data-toggle="tooltip" data-placement="top" title="Data Pribadi" href="javascript:void(0)"><img src="<?= base_url('assets/')?>png/person-4x.png"></a>
       <a class="btn btn-lg btn-bundar" data-toggle="tooltip" data-placement="top" title="Konfirmasi Data Input" href="javascript:void(0)"><img src="<?= base_url('assets/')?>png/location-4x.png"></a>
       <a class="btn btn-lg btn-bundar" data-toggle="tooltip" data-placement="top" title="Selesai" href="javascript:void(0)"><img src="<?= base_url('assets/')?>png/check-4x.png"></a>
     </div>
