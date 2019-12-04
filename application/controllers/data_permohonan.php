@@ -23,29 +23,24 @@ class Data_permohonan extends CI_Controller {
 		}
 	}
 	public function tampil_chained()
-		{
-			$id = $_POST['id'];
-			$dropdown_chained = $this->Model_dropdown->tampil_data_chained($id);
-			foreach ($dropdown_chained->result() as $baris) {
-				echo "<option value='".$baris->id_satpas."'>".$baris->satpas_kedatangan."</option>";
-			}
+	{
+		$id = $_POST['id'];
+		$dropdown_chained = $this->Model_dropdown->tampil_data_chained($id);
+		foreach ($dropdown_chained->result() as $baris) {
+			echo "<option value='".$baris->id_satpas."'>".$baris->satpas_kedatangan."</option>";
 		}
-		public function tampil_alamat()
-		{
-			$id = $_POST['id'];
-			$dropdown_chained = $this->Model_dropdown->tampil_data_alamat($id);
-			foreach ($dropdown_chained->result() as $baris) {
-				echo "<option value='".$baris->id_satpas."'>".$baris->alamat_satpas."</option>";
-			}
+	}
+	public function tampil_alamat()
+	{
+		$id = $_POST['id'];
+		$dropdown_chained = $this->Model_dropdown->tampil_data_alamat($id);
+		foreach ($dropdown_chained->result() as $baris) {
+			echo "<option value='".$baris->id_satpas."'>".$baris->alamat_satpas."</option>";
 		}
-	public function otomatis(){
-			$nik = $_POST['nik']; 
-
-			$s = $this->db->get_where('ktp', array('nik' => $nik));
-			$nik = $s->result();
-			$data = array(
-					'nama' => $nik['nama']
-			);
-			echo json_encode($data);
-		}
+	}
+	function get_nik(){
+		$nik=$this->input->post('nik');
+		$data=$this->M_pos->get_data_nik($nik);
+		echo json_encode($data);
+	}
 }
