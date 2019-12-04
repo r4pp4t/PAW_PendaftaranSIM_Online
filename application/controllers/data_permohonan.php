@@ -38,4 +38,14 @@ class Data_permohonan extends CI_Controller {
 				echo "<option value='".$baris->id_satpas."'>".$baris->alamat_satpas."</option>";
 			}
 		}
+	public function otomatis(){
+			$nik = $_POST['nik']; 
+
+			$s = $this->db->get_where('ktp', array('nik' => $nik));
+			$nik = $s->result();
+			$data = array(
+					'nama' => $nik['nama']
+			);
+			echo json_encode($data);
+		}
 }
