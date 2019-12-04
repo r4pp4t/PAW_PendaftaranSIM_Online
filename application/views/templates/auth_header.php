@@ -15,7 +15,7 @@
   <script src="<?= base_url('assets/'); ?>assets/js/jquery-1.10.2.js" type="text/javascript"></script>
   <script src="<?= base_url('assets/'); ?>assets/js/bootstrap.js" type="text/javascript"></script>
   <script src="<?= base_url('assets/'); ?>assets/js/login-register.js" type="text/javascript"></script>
-  <script src="<?= base_url('assets/'); ?>assets/js/config.js" type="text/javascript"></script>
+  <script src="<?= base_url('assets/'); ?>js/config.js" type="text/javascript"></script>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {

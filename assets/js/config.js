@@ -1,7 +1,7 @@
 function search(){
   $.ajax({
         type: "POST", // Method pengiriman data bisa dengan GET atau POST
-        url: baseurl + "data_permohonan/search", // Isi dengan url/path file php yang dituju
+        url: "<?= base_url('data_permohonan/search') ?>", // Isi dengan url/path file php yang dituju
         data: {nik : $("#nik").val()}, // data yang akan dikirim ke file proses
         dataType: "json",
         beforeSend: function(e) {
@@ -10,8 +10,6 @@ function search(){
             }
     },
     success: function(response){ // Ketika proses pengiriman berhasil
-            $("#loading").hide(); // Sembunyikan loadingnya
-            
             if(response.status == "success"){ // Jika isi dari array status adalah success
         $("#nama").val(response.nama); // set textbox dengan id nama
         $("#alamat").val(response.alamat); // set textbox dengan id alamat
@@ -30,7 +28,7 @@ $(document).ready(function(){
     });
     
     $("#nik").keyup(function(){ // Ketika user menekan tombol di keyboard
-    if(event.keyCode == 13){ // Jika user menekan tombol ENTER
+    if(event.keyCode == 20){ // Jika user menekan tombol ENTER
       search(); // Panggil function search
     }
   });
