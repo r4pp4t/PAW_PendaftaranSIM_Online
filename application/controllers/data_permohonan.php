@@ -55,5 +55,31 @@ class Data_permohonan extends CI_Controller {
     }
     echo json_encode($callback); // konversi varibael $callback menjadi JSON
   }
-    
+  public function tampil()
+	{
+		$this->load->model('model_pend');
+		$this->model_pend->proses_pendaftaran();
+	}
+  public function simpan()
+	{
+		$post=$this->input->post();
+		$data=array('jenis_permohonan' => $post['sim_baru'], 
+                  'polda_kedatangan' => $post['polda_kedatangan'],
+                  'satpas_kedatangan' => $post['satpas_kedatangan'],
+                  'alamat_satpas' => $post['alamat_satpas'],
+                  'email' => $post['email'],
+                  'nik' =>  $post['nik'],
+                  'nama' => $post['nama'],
+                  'tempat_lahir' => $post['tempat_lahir'],
+                  'tgl_lahir' => $post['tgl_lahir'],
+                  'tinggi' => $post['tinggi'],
+                  'gol_darah' => $post['gol_darah'],
+                  'alamat' => $post['alamat'],
+                  'golongan_SIM' => $post['sim'],
+                  'kewarganegaraan' => $post['kewarganegaraan']);
+		$data['biaya']=100000;
+		$data['kode_pembayaran']=6001567839001234;
+		$this->load->model('model_pend');
+		$this->model_pend->simpan_pendaftaran($data);
+	}
 }
