@@ -92,7 +92,40 @@
                   <input type="hidden" name="alamat" value="<?php echo($alamat);?>">
                   <input type="hidden" name="sim" value="<?php echo($sim);?>">
                   <input type="hidden" name="kewarganegaraan" value="<?php echo($kewarganegaraan);?>">
-              <input type="submit" name="submit" class="btn btn-primary float-right"></form>
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Pembayaran</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Nominal Rp.100.000,-
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <input type="submit" class="btn btn-info" value="Yes">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+              <!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Kirim
+</button>
+              </form>
             </td>
             </tr>
           </table>
