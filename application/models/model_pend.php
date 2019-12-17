@@ -38,5 +38,7 @@ class model_pend extends CI_Model
 	public function simpan_pendaftaran($data)
 	{
 		$this->db->insert('pendaftar',$data);
+		$this->load->view('templates/auth_header');
+		$this->load->view('auth/done');
 	}
 }
